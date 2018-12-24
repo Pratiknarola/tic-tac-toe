@@ -47,26 +47,26 @@ def playAgain():
 def makeMove(board, letter, move):
     board[move] = letter
 
-def isWinnner(bo, le):
+def isWinnner(board, letter):
     #givven a board and a player's letter, this function returns true if that player has won
     #here i used bo instead of board and le instead of letter
-    return ((bo[7]== le and bo[8]== le and bo[9]== le) or
-            (bo[4]== le and bo[5]== le and bo[6]== le) or
-            (bo[1]== le and bo[2]== le and bo[3]== le) or
-            (bo[7]== le and bo[4]== le and bo[1]== le) or
-            (bo[8]== le and bo[5]== le and bo[2]== le) or
-            (bo[9]== le and bo[6]== le and bo[3]== le) or
-            (bo[7]== le and bo[5]== le and bo[3]== le) or
-            (bo[9]== le and bo[5]== le and bo[1]== le))
+    return ((board[7]== letter and board[8]== letter and board[9]== letter) or
+            (board[4]== letter and board[5]== letter and board[6]== letter) or
+            (board[1]== letter and board[2]== letter and board[3]== letter) or
+            (board[7]== letter and board[4]== letter and board[1]== letter) or
+            (board[8]== letter and board[5]== letter and board[2]== letter) or
+            (board[9]== letter and board[6]== letter and board[3]== letter) or
+            (board[7]== letter and board[5]== letter and board[3]== letter) or
+            (board[9]== letter and board[5]== letter and board[1]== letter))
 
 def getBoardCopy(board):
     #make a duplicate of the board list and return its duplicate.
-    dupeBoard = []
+    duBoard = []
 
     for i in board:
-        dupeBoard.append(i)
+        duBoard.append(i)
 
-    return dupeBoard
+    return duBoard
 
 def isSpaceFree(board, move):
     #returns true if space is free
